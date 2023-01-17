@@ -571,7 +571,7 @@ const Main= ({
       setLoadermsg('Payment Capture Now Activating Your Account');
 
     let wallets_data = '';
-     await axios.get(base_url+'activate_package_binary/'+package_amt+'/'+wallets_add_data+'')
+     await axios.get(base_url+'activate_package_binary_hash/'+package_amt+'/'+wallets_add_data+'/'+tx1_hash)
      .then(res => {
       wallets_data = res.data;  
       console.log(wallets_data);

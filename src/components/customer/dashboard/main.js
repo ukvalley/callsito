@@ -152,7 +152,7 @@ const Main= ({
     },[loading,walletdata]);
 
 
-    const MINUTE_MS = 9000000000;
+    const MINUTE_MS = 9000;
     useEffect(() => {
       const interval = setInterval(() => {
         refresh_wall()
@@ -243,6 +243,7 @@ const Main= ({
             setFetch(true);
             setLoading(false);
             setLoadermsg('');
+            setWallets(res.data.wallets);
 
           
          })    
@@ -272,13 +273,14 @@ const Main= ({
       
     
 
-     await axios.get(base_url+'dashboard_information/'+loggedInUser, {headers:header})
+     await axios.get(base_url+'withdrawal_balance_get/'+loggedInUser, {headers:header})
       .then(res => { 
 
        //  console.log(res.data)
            
-            setUserData(res.data);
+            
             setFetch(true);
+            setWallets(res.data.wallets);
             
 
 
@@ -629,7 +631,7 @@ const Main= ({
   });
 
  // await delay(300);
-
+/*
  if(!wallet.connected)
  {
   Swal.fire({
@@ -646,10 +648,11 @@ const Main= ({
 
  }
 
+ */
 
 
 
-  fetch_dashboard_info_refresh(wallet.publicKey.toBase58());
+
 
     console.log(userdata.user_data.withdrawal_lock);
    if(userdata.user_data.withdrawal_lock == 'true')
@@ -667,10 +670,16 @@ const Main= ({
   }
     
 
+  
+
    
    let loggedInUser = localStorage.getItem("loggedInUser");
+   fetch_dashboard_info_refresh(loggedInUser);
    console.log('clicked')
-    let amount = userdata.wallets.income_wallet;
+    let amount = wallets.income_wallet;
+
+    
+
     let user_id = loggedInUser;
     let wallet_addr = wallet.publicKey.toBase58();
 
@@ -684,6 +693,33 @@ const Main= ({
       console.log('wallet matched')
 
       setLoadermsg('Started proceesing on withdrawal. Please wait...');
+
+    //  await axios.get(base_url+'withdrawal_all/'+amount+'/'+user_id+'/.');
+
+
+      await axios.get(base_url+'withdrawal_all/'+amount+'/'+user_id+'/WITHDRAWALSUCCESS', {headers:header})
+      .then(res => { 
+
+       //  console.log(res.data)
+           if(res.data.status == "error")
+           {
+            Swal.fire({
+              title: 'Error!',
+              text: "You Don't have enough balance",
+              icon: 'error',
+              confirmButtonText: 'Okay'
+            })
+              return false;
+           }
+            
+           
+            
+
+
+         })    
+      .catch(error => {
+              console.error('There was an error!', error);
+      });
      
 
      
@@ -725,6 +761,9 @@ const Main= ({
 )
 
 
+     
+
+
   
 
      
@@ -743,14 +782,14 @@ const Main= ({
           [AdminKeypair]
         );
 
-        await axios.get(base_url+'withdrawal_all/'+amount+'/'+user_id+'/'+signature); 
+       
 
        
         setLoadermsg('Transferred Successfully signature is:'+signature);
-        fetch_dashboard_info(loggedInUser);
+        fetch_dashboard_info_refresh(loggedInUser);
       
   } catch (error) {
-      console.log(error);
+ 
       Swal.fire({
         title: 'Error!',
         text: error,

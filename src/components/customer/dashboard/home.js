@@ -1,91 +1,42 @@
-import React, { useState } from 'react';
+import React, { useState } from'react';
 import {  useNavigate,Link  } from "react-router-dom";
 
 
-import index_decentralized from '../../../assets1/index_decentralized.webp';
-import index_low_cost from '../../../assets1/index_low_cost.webp';
-import index_fast_fck from '../../../assets1/index_fast_fck.webp';
-import video2782 from '../../../assets1/2781013183.mp4';
-import useCollapse from 'react-collapsed'
 
-import logo from '../../../assets/helloleadlogo.png';
+import useCollapse from'react-collapsed'
 
 
 
-import app from '../../../assetsm/app.png';
-
-import white_paper from '../../../assetsm/white_paper.pdf';
-
-import appm from '../../../assetsm/appm.png';
-import gg from '../../../assetsm/gg.png';
-import ic1 from '../../../assetsm/ic1.png';
-import ic2 from '../../../assetsm/ic2.png';
-import ic3 from '../../../assetsm/ic3.png';
-import ic4 from '../../../assetsm/ic4.png';
-import ic5 from '../../../assetsm/ic5.png';
-import ic6 from '../../../assetsm/ic6.png';
-import ic7 from '../../../assetsm/ic6.png';
-import ic8 from '../../../assetsm/ic8.png';
-import ic9 from '../../../assetsm/ic9.png';
-import ic10 from '../../../assetsm/ic10.png';
-import ic11 from '../../../assetsm/ic11.png';
-import ic12 from '../../../assetsm/ic12.png';
-import p1 from '../../../assetsm/p1.png';
-import p3 from '../../../assetsm/p3.png';
-import p4 from '../../../assetsm/p4.png';
-import pp from '../../../assetsm/pp.png';
-import ssh2 from '../../../assetsm/ssh2.png';
-import ss1 from '../../../assetsm/ss1.jpg';
-
-import video from '../../../assetsm/meta.mp4';
-
-
-import banner_img from '../../../assetsm/banner-img.png';
-
-
-import s2 from '../../../assetsm/s2.png';
-import s3 from '../../../assetsm/s3.png';
-import offer1 from '../../../assetsm/offer1.png';
-import off from '../../../assetsm/off.png';
-
-import Solana from '../../../assetsm/Solana.png';
-import st2 from '../../../assetsm/st2.png';
-import tm1 from '../../../assetsm/tm1.png';
-import uk2 from '../../../assetsm/solmathlogodark.svg';
-import solmathlogo from '../../../assetsm/solmathlogo.svg';
-
-import wc1 from '../../../assetsm/wc1.png';
-
-
-import { FaGripVertical,FaGripLines,FaFacebook,FaInstagram,FaYoutube,FaTwitter } from "react-icons/fa";
-
-
-import '../../../App.css'
+import style from'./home.module.css'
 
 
 
 
 
 
-import Loader2 from '../../customer/layout/loader2';
 
 
 
-import { Connection, PublicKey  } from '@solana/web3.js';
+
+
+import Loader2 from'../../customer/layout/loader2';
+
+
+
+import { Connection, PublicKey  } from'@solana/web3.js';
 import {
    BN,
    Program, Provider, web3
- } from '@project-serum/anchor';
- import idl from '../../../idl.json';
+ } from'@project-serum/anchor';
+ import idl from'../../../idl.json';
 
 
- import { getPhantomWallet, getMathWallet, getSolletWallet, getSolflareWallet,getCoin98Wallet } from '@solana/wallet-adapter-wallets';
- import { useWallet } from '@solana/wallet-adapter-react';
+ import { getPhantomWallet, getMathWallet, getSolletWallet, getSolflareWallet,getCoin98Wallet } from'@solana/wallet-adapter-wallets';
+ import { useWallet } from'@solana/wallet-adapter-react';
 
 
 
  require('@solana/wallet-adapter-react-ui/styles.css');
- require('../dashboard/front.css');
 
 
  const wallets = [
@@ -105,7 +56,6 @@ const opts = {
 
 
 const programID = new PublicKey(idl.metadata.address);
-require('../dashboard/front.css');
 const Home= ({
   
 }) => {
@@ -212,786 +162,754 @@ const Home= ({
    
 
     <>
-    {/* JavaScript Bundle with Popper */}
-    <nav className="navbar navbar-expand-lg bg-light nv shadoo body">
-      <div className="container-fluid">
-      <center>    
-
-        <div className="logo_container">
-                <a className="navbar-brand " id="lc" href="#">
-          <img className="logo" src={logo}></img>
-
-        </a>
-
-        </div>
-        </center>
-
-        <button
-          className="navbar-toggler"
-          style={{color:'white'}}
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          {...getToggleProps()}
-        >
-          {isExpanded ? <FaGripLines /> : <FaGripVertical />}
-        </button>
+          <div>
+        <meta charSet="utf-8" />
+        <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+        <title>Bigtech - ICO &amp; Crypto Landing Page Template</title>
+        <meta name="description" content />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="shortcut icon" type="image/x-icon" href="https://smthemebazar.com/html/bigtech/assets/img/favicon.png" />
+        {/* Place favicon.ico in the root directory */}
+        {/* CSS here */}
         
-        <div {...getCollapseProps()} className=" navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <a
-                className="nav-link active "
-                id="lc"
-                aria-current="page"
-                href="#"
-              >
-                Home
-              </a>
-            </li>
-            <li className="nav-item">
-             <Link to="/login"> <a className="nav-link " id="lc" href="#">
-                Login
-              </a> </Link>
-            </li>
-            <li className="nav-item">
-            <Link to="/register"><a className="nav-link c" id="lc" href="#">
-                Register
-              </a>
-              </Link>
-              
-            </li>
-          </ul>
-        </div>
         
-      </div>
-    </nav>
-    {/* -------------------------------------------------------- */}
-
-
-
-
-
-
-
-
-    <div className="container">
-  
-
-      <div className="row content">
-        
-        <div className="col-md-6">
-          <h1 className="headline mt-5 animate-charcter">
-            Made for People by People          </h1>
-
-          <h6 className="p1">
-          The Hello Trade project is a decentralized, peer-to-peer, open source business model that will allow users to buy and sell digital products and services in a completely safe and transparent way, using the power of blockchain technology.          </h6>
-          <Link to="/login" >
-          <button className="cr-banner-btn d-flex a justify-content-center align-items-center mt-3">
-            Get Started
-          </button>
-          </Link>
-
-                  </div>
-         </div>
-      {/* -------------------------------------------------------------- */}
-      <div className="container-fluid mt-5 mb-5">
-        <div className="card cr-partner-content" id="card_color">
-          <div className="col-md-12">
-          <marquee behavior="scroll" scrollamount={10} direction="left">
-
-          <h3 className="p1 text-white">
-           Pre sale live will start from 25 Aug to 25 Nov 2022
-          </h3>
-
-          </marquee>
-
-            <marquee behavior="scroll" scrollamount={10} direction="left">
-              <img
-                src={p1}
-                style={{ marginLeft: "11%" }}
-                alt="Natural"
-              />
-              <img
-                src={p4}
-                style={{ marginLeft: "11%" }}
-                alt="Natural"
-              />
-              <img
-                src={p3}
-                style={{ marginLeft: "11%" }}
-                alt="Natural"
-              />
-            </marquee>
-          </div>
-        </div>
-      </div>
-      {/* ------------------------------------------------------------- */}
-      <div className="container mt-5">
-        <div className="row">
-          <div className="col-md-12 ">
-            <div className="row">
-              <div className="col-md-6">
-                <div className="row">
-                  <div className="col-md-6">
-                    <div
-                      className="card "
-                      id="card_color"
-                      style={{ marginTop: "4%" }}
-                    >
-                      <img
-                        className="card-img-top"
-                        id="card_img"
-                        src={ic1}
-                      />
-                      <div className="card-body">
-                        <h5 className="card-text">Easy To Transfer</h5>
-                        <p className=" card-text">
-                        The project is based on the Solana blockchain, which is one of the most advanced and secure blockchain platforms in the world. Solana is able to process more than 50,000 transactions per second, which makes it the perfect choice for a project like Hello Trade.
-
-</p>
+        {/* header-area */}
+        <header id="header">
+          <div id="header-fixed-height" />
+          <div id="sticky-header" className={`${style['menu-area']} ${style['sticky-menu']}`}>
+            <div className={`${style['container']} ${style['custom-container']}`}>
+              <div className={`${style['row']}`}>
+                <div className={`${style['col-12']}`}>
+                  <div className={`${style['mobile-nav-toggler']}`}><i className="fas fa-bars" /></div>
+                  <div className={`${style['menu-wrap']}`}>
+                    <nav className={`${style['menu-nav']}`}>
+                      <div className={`${style['logo']}`}>
+                        <a href="index.html"><img src="https://smthemebazar.com/html/bigtech/assets/img/logo/logo.png" alt="" /></a>
                       </div>
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div
-                      className="card"
-                      id="card_color"
-                      style={{ marginTop: "4%" }}
-                    >
-                      <img
-                        className="card-img-top"
-                        id="card_img"
-                        src={ic2}
-                      />
-                      <div className="card-body">
-                        <h5 className="card-text">Private</h5>
-                        <p className=" card-text">
-                        The Hello Trade team has created a native token, called the Hello Trade (CLO), which will be used to power the ecosystem. The token will be used to pay for goods and services, as well as to reward users for their contributions to the platform.                        </p>
+                      <div className={`${style['navbar-wrap']} ${style['main-menu']} ${style['d-none']} ${style['d-lg-flex']}`}>
+                        <ul className={`${style['navigation']}`}>
+                          <li className={`${style['active']} ${style['menu-item-has-children']} `}><a href="#header" className="section-link">Home</a>
+                            <ul className={`${style['sub-menu']}`}>
+                              <li className={`${style['active']}`}><a href="index.html">Home One</a></li>
+                              <li><a href="index-2.html">Home Two</a></li>
+                            </ul>
+                          </li>
+                          <li><a href="#about" className={`${style['section-link']}`}>About us</a></li>
+                          <li><a href="#sales" className={`${style['section-link']}`}>Sales</a></li>
+                          <li><a href="#roadmap" className={`${style['section-link']}`}>Roadmap</a></li>
+                          <li className={`${style['menu-item-has-children']}`}><a href="blog.html">Blog</a>
+                            <ul className={`${style['sub-menu']}`}>
+                              <li><a href="blog.html">Our Blog</a></li>
+                              <li><a href="blog-details.html">Blog Details</a></li>
+                            </ul>
+                          </li>
+                          <li><a href="#contact" className={`${style['section-link']}`}>Contact us</a></li>
+                        </ul>
                       </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="row">
-                  <div className="col-md-6">
-                    <div
-                      className="card"
-                      id="card_color"
-                      style={{ marginTop: "4%" }}
-                    >
-                      <img
-                        className="card-img-top"
-                        id="card_img"
-                        src={ic3}
-                      />
-                      <div className="card-body">
-                        <h5 className="card-text">Secure & Fast</h5>
-                        <p className=" card-text">
-                        The project is currently in its early stages, and the team is working on developing the platform. The mainnet is scheduled to launch in Q4 2020.                        </p>
+                      <div className={`${style['header-action']} ${style['d-none']} ${style['d-md-block']}`}>
+                        <ul>
+                          <li className={`${style['header-lang']}`}><span className={`${style['selected-lang']}`}>ENG</span>
+                            <ul className={`${style['lang-list']}`}>
+                              <li><a href="#">IND</a></li>
+                              <li><a href="#">BNG</a></li>
+                              <li><a href="#">TUR</a></li>
+                              <li><a href="#">CIN</a></li>
+                            </ul>
+                          </li>
+                          <li className={`${style['header-btn']}`}><a href="#" className={`${style['btn']}`}>Buy Now</a></li>
+                        </ul>
                       </div>
-                    </div>
+                    </nav>
                   </div>
-                  <div className="col-md-6">
-                    <div
-                      className="card"
-                      id="card_color"
-                      style={{ marginTop: "4%" }}
-                    >
-                      <img
-                        className="card-img-top"
-                        id="card_img"
-                        src={ic4}
-                      />
-                      <div className="card-body">
-                        <h5 className="card-text">Decentralized Community</h5>
-                        <p className=" card-text">
-                        The company has already developed a prototype of the platform and is currently testing it with a small group of users. Hello Trade plans to launch the platform in Q1 2019.                        </p>
+                  {/* Mobile Menu  */}
+                  <div className={`${style['mobile-menu']}`}>
+                    <nav className={`${style['menu-box']}`}>
+                      <div className={`${style['close-btn']}`}><i className="fas fa-times" /></div>
+                      <div className={`${style['nav-logo']}`}><a href="index.html"><img src="https://smthemebazar.com/html/bigtech/assets/img/logo/logo.png" alt="" title /></a>
                       </div>
-                    </div>
+                      <div className={`${style['menu-outer']}`}>
+                        {/*Here Menu Will Come Automatically Via Javascript / Same Menu as in Header*/}
+                      </div>
+                      <div className={`${style['social-links']}`}>
+                        <ul className={`${style['clearfix']}`}>
+                          <li><a href="#"><i className="fab fa-facebook-f" /></a></li>
+                          <li><a href="#"><i className="fab fa-twitter" /></a></li>
+                          <li><a href="#"><i className="fab fa-instagram" /></a></li>
+                          <li><a href="#"><i className="fab fa-linkedin-in" /></a></li>
+                          <li><a href="#"><i className="fab fa-youtube" /></a></li>
+                        </ul>
+                      </div>
+                    </nav>
                   </div>
-                </div>
-              </div>
-              <div className="col-md-6 mt-5">
-                <h5 className="sas">Hello Trade Feature</h5>
-                <h3 className="the_line mt-3">
-                The Hello Trade team is composed of experienced professionals from the fields of business, marketing, and blockchain technology, and includes an advisory board with members from companies such as Google, Facebook, and Microsoft.                </h3>
-                <p className="p mt-5">
-                Hello Trade is a business plan that will use Solana blockchain technology in order to create a decentralized ecosystem for businesses and consumers. The aim is to provide a better way for businesses to interact with their customers, as well as to allow consumers to make more informed choices about the products and services they purchase.                </p>
-                <p className="p">
-                The Hello Trade ecosystem will be powered by its own cryptocurrency, called the Hello Trade (CLO), which will be used to reward businesses for participating in the ecosystem and to pay for goods and services within the ecosystem.
-                </p>
-                <a
-                  className="d-flex justify-content-center align-items-center cr-btn"
-                  href=""
-                >
-                  Explore More
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* ///////////////////////////////////////////////////////////////////// 
-      <div className="container mt-5">
-        <div className="text-center mt-5">
-          <span className="cr-section-title">Live Price</span>
-          <h2 className="head">Crypto Live Market Price</h2>
-          <p className="p">
-            When someone creates a template and asks for feedback on it, they
-            don't want <br /> the people reviewing it to get distracted.
-          </p>
-        </div>
-        <div className="col-md-12 mt-5">
-          <div className="row">
-            <div className="col-md-4">
-              <div className="cr-live-market-innerbox-item position-relative cr-headline pera-content">
-                <div className="thx-inner-item c">
-                  <div className="thx-inner-icon-ttitle d-flex align-items-center">
-                    <div className="thx-inner-icon d-flex align-items-center justify-content-center">
-                      <img src={ic4} alt="" />
-                    </div>
-                    <div className="thx-inner-title">
-                      <h3 className="c" style={{ marginLeft: "15%" }}>
-                        Ethereum
-                      </h3>
-                    </div>
-                  </div>
-                  <table className="table">
-                    <tbody>
-                      <tr>
-                        <td>
-                          {" "}
-                          <select>
-                            <option>USD</option>
-                            <option>CAD</option>
-                            <option>EUR</option>
-                          </select>
-                        </td>
-                        <td className="c">Change 1h</td>
-                        <td className="c">Change 24h</td>
-                        <td className="c">Last 7d</td>
-                      </tr>
-                      <tr>
-                        <th className="c" scope="row">
-                          3,074.0
-                        </th>
-                        <td className="c">0.56</td>
-                        <td className="c">4.59</td>
-                        <td className="c">6.59</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 ">
-              <div className="cr-live-market-innerbox-item position-relative cr-headline pera-content">
-                <div className="thx-inner-item c">
-                  <div className="thx-inner-icon-ttitle d-flex align-items-center">
-                    <div className="thx-inner-icon d-flex align-items-center justify-content-center">
-                      <img src={ic6} alt="" />
-                    </div>
-                    <div className="thx-inner-title">
-                      <h3 className="c" style={{ marginLeft: "15%" }}>
-                        Bitcoin
-                      </h3>
-                    </div>
-                  </div>
-                  <table className="table">
-                    <tbody>
-                      <tr>
-                        <td>
-                          {" "}
-                          <select>
-                            <option>USD</option>
-                            <option>CAD</option>
-                            <option>EUR</option>
-                          </select>
-                        </td>
-                        <td className="c">Change 1h</td>
-                        <td className="c">Change 24h</td>
-                        <td className="c">Last 7d</td>
-                      </tr>
-                      <tr>
-                        <th className="c" scope="row">
-                          3,074.0
-                        </th>
-                        <td className="c">0.56</td>
-                        <td className="c">4.59</td>
-                        <td className="c">6.59</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 ">
-              <div className="cr-live-market-innerbox-item position-relative cr-headline pera-content">
-                <div className="thx-inner-item c">
-                  <div className="thx-inner-icon-ttitle d-flex align-items-center">
-                    <div className="thx-inner-icon d-flex align-items-center justify-content-center">
-                      <img src={ic5} alt="" />
-                    </div>
-                    <div className="thx-inner-title">
-                      <h3 className="c" style={{ marginLeft: "15%" }}>
-                        Binance_Coin
-                      </h3>
-                    </div>
-                  </div>
-                  <table className="table">
-                    <tbody>
-                      <tr>
-                        <td>
-                          {" "}
-                          <select>
-                            <option>USD</option>
-                            <option>CAD</option>
-                            <option>EUR</option>
-                          </select>
-                        </td>
-                        <td className="c">Change 1h</td>
-                        <td className="c">Change 24h</td>
-                        <td className="c">Last 7d</td>
-                      </tr>
-                      <tr>
-                        <th className="c" scope="row">
-                          3,074.0
-                        </th>
-                        <td className="c">0.56</td>
-                        <td className="c">4.59</td>
-                        <td className="c">6.59</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  <div className={`${style['menu-backdrop']}`} />
+                  {/* End Mobile Menu */}
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div className="col-md-12 mt-5">
-          <div className="row">
-            <div className="col-md-4">
-              <div className="cr-live-market-innerbox-item position-relative cr-headline pera-content">
-                <div className="thx-inner-item c">
-                  <div className="thx-inner-icon-ttitle d-flex align-items-center">
-                    <div className="thx-inner-icon d-flex align-items-center justify-content-center">
-                      <img src={ic8} alt="" />
-                    </div>
-                    <div className="thx-inner-title">
-                      <h4 className="c" style={{ marginLeft: "10%" }}>
-                        USD_Coin
-                      </h4>
-                    </div>
+        </header>
+        {/* header-area-end */}
+        {/* main-area */}
+        <main className="fix">
+          {/* banner-area */}
+          <section className={`${style['banner-area']} ${style['banner-bg']}`}>
+            <div className={`${style['banner-shape-wrap']}`}>
+              <img src="https://smthemebazar.com/html/bigtech/assets/img/banner/banner_shape01.png" alt="" className={`${style['img-one']}`} />
+              <img src="https://smthemebazar.com/html/bigtech/assets/img/banner/banner_shape02.png" alt="" className={`${style['img-two']}`} />
+              <img src="https://smthemebazar.com/html/bigtech/assets/img/banner/banner_shape03.png" alt="" className={`${style['img-two']}`} />
+            </div>
+            <div className={`${style['container']}`}>
+              <div className='row justify-content-center'>
+                <div className={`${style['col-lg-10']}`}>
+                  <div className={`${style['banner-content']} text-center `} >
+                    <img src="https://smthemebazar.com/html/bigtech/assets/img/icon/fire.png" alt="" />
+                    <h2 className={`${style['title']}`}>Join Future of Algorithmic <span>Crypto</span> Trading Strategies</h2>
                   </div>
-                  <table className="table">
-                    <tbody>
-                      <tr>
-                        <td>
-                          {" "}
-                          <select>
-                            <option>USD</option>
-                            <option>CAD</option>
-                            <option>EUR</option>
-                          </select>
-                        </td>
-                        <td className="c">Change 1h</td>
-                        <td className="c">Change 24h</td>
-                        <td className="c">Last 7d</td>
-                      </tr>
-                      <tr>
-                        <th className="c" scope="row">
-                          3,074.0
-                        </th>
-                        <td className="c">0.56</td>
-                        <td className="c">4.59</td>
-                        <td className="c">6.59</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-4 ">
-              <div className="cr-live-market-innerbox-item position-relative cr-headline pera-content">
-                <div className="thx-inner-item c">
-                  <div className="thx-inner-icon-ttitle d-flex align-items-center">
-                    <div className="thx-inner-icon d-flex align-items-center justify-content-center">
-                      <img src={ic9} alt="" />
+                  <div className={`${style['banner-progress-wrap']}`}>
+                    <ul>
+                      <li>Pre Sell</li>
+                      <li>Soft Cap</li>
+                      <li>Bonus</li>
+                    </ul>
+                    <div className={`${style['progress']}`}>
+                      <div className={`${style['progress-bar']}`} role="progressbar" style={{width:'75%'}} aria-valuenow={75} aria-valuemin={0} aria-valuemax={100} />
                     </div>
-                    <div className="thx-inner-title">
-                      <h3 className="c" style={{ marginLeft: "15%" }}>
-                        Cardano
-                      </h3>
-                    </div>
+                    <h4 className={`${style['title']}`}>65% target raised <span>1 ETH = $1000 = 3177.38 CIC</span></h4>
                   </div>
-                  <table className="table">
-                    <tbody>
-                      <tr>
-                        <td>
-                          {" "}
-                          <select>
-                            <option>USD</option>
-                            <option>CAD</option>
-                            <option>EUR</option>
-                          </select>
-                        </td>
-                        <td className="c">Change 1h</td>
-                        <td className="c">Change 24h</td>
-                        <td className="c">Last 7d</td>
-                      </tr>
-                      <tr>
-                        <th className="c" scope="row">
-                          3,074.0
-                        </th>
-                        <td className="c">0.56</td>
-                        <td className="c">4.59</td>
-                        <td className="c">6.59</td>
-                      </tr>
-                    </tbody>
-                  </table>
                 </div>
               </div>
-            </div>
-            <div className="col-lg-4 ">
-              <div className="cr-live-market-innerbox-item position-relative cr-headline pera-content">
-                <div className="thx-inner-item c">
-                  <div className="thx-inner-icon-ttitle d-flex align-items-center">
-                    <div className="thx-inner-icon d-flex align-items-center justify-content-center">
-                      <img src={ic10} alt="" />
-                    </div>
-                    <div className="thx-inner-title">
-                      <h3 className="c" style={{ marginLeft: "15%" }}>
-                        Tether
-                      </h3>
-                    </div>
-                  </div>
-                  <table className="table">
-                    <tbody>
-                      <tr>
-                        <td>
-                          <select>
-                            <option>USD</option>
-                            <option>CAD</option>
-                            <option>EUR</option>
-                          </select>
-                        </td>
-                        <td className="c">Change 1h</td>
-                        <td className="c">Change 24h</td>
-                        <td className="c">Last 7d</td>
-                      </tr>
-                      <tr>
-                        <th className="c" scope="row">
-                          3,074.0
-                        </th>
-                        <td className="c">0.56</td>
-                        <td className="c">4.59</td>
-                        <td className="c">6.59</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      */}
-      {/* ///////////////////////////////////////////////////////////////////// */}
-      <div className="container mt-5">
-        <div className="row">
-          <div className="col-md-6 ">
-            <h1 className="cr mt-5 ">
-              We’ve Built A Platform
-              <br /> To Buy &amp; Sell Hello Trade
-            </h1>
-            <h6 className="c2 mt-5">
-            The Hello Trade team has created a very user-friendly platform that will allow anyone to buy or sell digital products and services with just a few clicks. The platform will also include a built-in payment system that will make it very easy to conduct transactions.              
-            </h6>
-            <div className="col-md-12 mt-5">
-              <div className="row">
-                <div className="col-md-2  mb-3">
-                  <img src={ic12} />
-                </div>
-                <div className="col-md-8 ">
-                  <h4 className="c">Solana Factor</h4>
-                  <p className="c2">
-                  The Hello Trade project has a lot of potential and could become a very successful business model. I believe that the team behind the project has what it takes to make this project a success.                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-12 mt-5">
-              <div className="row">
-                <div className="col-md-2 mb-3 ">
-                  <img src={ic11} />
-                </div>
-                <div className="col-md-8 ">
-                  <h4 className="c">Referral Program</h4>
-                  <p className="c2">
-                  The company has already raised $1 million in seed funding, and it plans to use the funds in order to develop the platform further, as well as to expand its team.                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-6">
-            <img className="floating img2" src={wc1} />
-          </div>
-        </div>
-      </div>
-      {/* ////////////////////////////////////////////////////////////////// */}
-      <section
-        className="shadoo mt-5"
-        style={{ backgroundImage: off }}
-      >
-        <div className="container">
-          <div className="row">
-            <div className="col-md-6 ">
-              <div className="row">
-                <h1 className="cr" style={{ marginTop: "18%" }}>
-                Token Distribution Program
-                </h1>
-                <p className="c2 mb-5">
-                Hello Trade is a crypto based business plan using Solana blockchain. The company has developed a unique system that will allow businesses to use crypto currencies to pay for goods and services. The company plans to launch its own cryptocurrency, called the Hello Tradecoin, which will be used to pay for goods and services on the Hello Trade platform. The company is planning to launch an Initial Coin Offering (ICO) to raise funds for the development of the platform.
-                </p>
-              </div>
-              <a
-                className="d-flex justify-content-center align-items-center cr-btn mb-5"
-                href=""
-              >
-                Explore More
-              </a>
-            </div>
-            <div className="col-md-6 mt-5">
-              <div className="row">
-                <img src={offer1} />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* ////////////////////////////////////////////////////////////////////// */}
-      <div className="container-fluid">
-        <center>
-          <h4 className="cr-section-title mt-5">RoadMap</h4>
-        </center>
-        <center>
-          <h2 className="head">The Timeline of Hello Trade</h2>
-        </center>
-        <section id="cd-timeline" className="cd-container">
-          <div className="cd-timeline-block">
-            <div className="cd-timeline-img cd-picture"></div>
-            <div className="cd-timeline-content">
-              <h2>Blockchain</h2>
-              <div className="timeline-content-info">
-                <span className="c">24.07.2021</span>
-              </div>
-              <p>
-                Introduce in our mind after undefined growth of BTC and other alt coins. We started research on Blockchain and its transaction.
-                The Hello Trade ICO will be open to accredited investors from all over the world. The company is planning to raise $50 million through the ICO. The funds raised through the ICO will be used to develop the platform, marketing, and other expenses.
-              </p>
-            </div>{" "}
-            {/* cd-timeline-content */}
-          </div>{" "}
-          {/* cd-timeline-block */}
-          <div className="cd-timeline-block">
-            <div className="cd-timeline-img cd-movie"></div>{" "}
-            {/* cd-timeline-img */}
-            <div className="cd-timeline-content">
-              <h2>Token Bridge</h2>
-              <span className="c">03.02.2022</span>
-              <p>
-                We find the way to start with the token and started working for the same. As it was new to our team we started to find best blockchain
-              </p>
-              <span className="cd-date calr">Feb 22</span>
-            </div>{" "}
-            {/* cd-timeline-content */}
-          </div>{" "}
-          {/* cd-timeline-block */}
-          <div className="cd-timeline-block">
-            <div className="cd-timeline-img cd-picture"></div>{" "}
-            {/* cd-timeline-img */}
-            <div className="cd-timeline-content">
-              <h2>Solana Factor</h2>
-              <span className="c">17.03.2022</span>
-              <p>
-                We found solana and we started working with Solana. Solana is fastest and cheapest blockchain over the earth.
-              </p>
-              <span className="cd-date cal">March 22</span>
-            </div>{" "}
-            {/* cd-timeline-content */}
-          </div>{" "}
-          {/* cd-timeline-block */}
-          <div className="cd-timeline-block">
-            <div className="cd-timeline-img cd-location"></div>{" "}
-            {/* cd-timeline-img */}
-            <div className="cd-timeline-content">
-              <h2>Compasation plan</h2>
-              <span className="c">24.04.2022</span>
-              <p>
-                Started working in creation of easy and best Compasation plan that will benifit to the users
-              </p>
-              <span className="cd-date calr">April 22</span>
-            </div>{" "}
-            {/* cd-timeline-content */}
-          </div>{" "}
-          {/* cd-timeline-block */}
-          <div className="cd-timeline-block">
-            <div className="cd-timeline-img cd-location"></div>
-            <div className="cd-timeline-content">
-              <h2>Marketing and Launching</h2>
-              <span className="c">28.05.2022</span>
-              <p>
-                Started working on Marketing and launching activities. We opted 4P formula for Marketing.
-              </p>
-              <span className="cd-date cal">May 22</span>
-            </div>{" "}
-            {/* cd-timeline-content */}
-          </div>{" "}
-          {/* cd-timeline-block */}
-          {/* cd-timeline-block */}
-          {/* cd-timeline */}
-        </section>
-
-      </div>
-
-      {/*
-      <div className="container " style={{ marginTop: "15%" }}>
-        <center>
-          <h1 className="head">Our Motivated Team</h1>
-        </center>
-        <center>
-          <p className="fonts1">
-            The main reason for using lorem ipsum text is that it keeps people
-            from focusing <br />
-            on the actual text
-          </p>
-        </center>
-      </div>
-      <div className="container mt-5">
-        <div className="row">
-          <div className="col-md-4">
-            <div className="card" id="card_color" style={{ maxWidth: 540 }}>
-              <div className="row no-gutters">
-                <div className="col-md-4">
-                  <img
-                    src={tm1}
-                    id="card_img1"
-                    className="card-img mt-3"
-                    alt="..."
-                  />
-                </div>
-                <div className="col-md-8">
-                  <div className="card-body">
-                    <h5 className="card-title team-name">Jane Cooper</h5>
-                    <p className="card-text">Investor in firm</p>
-                    <p className="card-text c">Last updated 3 mins ago</p>
+              <div className='row'>
+                <div className="col-xl-10">
+                  <div className={`${style['banner-countdown-wrap']} ${style['text-center']}`}>
+                    <h2 className={`${style['title']} text-center`}>ICO Will Start In..</h2>
+                    <div className={`${style['coming-time']}`} data-countdown="2023/1/29" />
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="col-md-4">
-            <div className="card mb-3" id="card_color" style={{ maxWidth: 540 }}>
-              <div className="row no-gutters">
-                <div className="col-md-4">
-                  <img
-                    src={tm1}
-                    id="card_img1"
-                    className="card-img mt-3"
-                    alt="..."
-                  />
-                </div>
-                <div className="col-md-8">
-                  <div className="card-body">
-                    <h5 className="card-title team-name">Jenny Wilson</h5>
-                    <p className="card-text">Investor in firm</p>
-                    <p className="card-text c">Last updated 3 mins ago</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-4">
-            <div className="card mb-3" id="card_color" style={{ maxWidth: 540 }}>
-              <div className="row no-gutters">
-                <div className="col-md-4">
-                  <img
-                    src={tm1}
-                    id="card_img1"
-                    className="card-img mt-3"
-                    alt="..."
-                  />
-                </div>
-                <div className="col-md-8">
-                  <div className="card-body">
-                    <h5 className="card-title team-name">Eleanor Pena</h5>
-                    <p className="card-text">Investor in firm</p>
-                    <p className="card-text c">Last updated 3 mins ago</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="container mt-5">
-            <center>
-              <a
-                className="d-flex justify-content-center align-items-center cr-btn "
-                href=""
-              >
-                Explore More
-              </a>
-            </center>
-          </div>
-        </div>
-      </div>
-      */}
-      {/* //////////////////////////////////////////////////////////////////////////// */}
-      <div className="container" style={{ marginTop: "14%" }}>
-        <div className="card red py-2 " id="card_color">
-          <div className="card-body text-white ">
+          </section>
+          {/* banner-area-end */}
+          {/* about-area */}
+          <section id="about" className={`${style['about-area']} ${style['pt-130']} ${style['pb-130']}`}>
             <div className="container">
-              <div className="row">
-                <div className="col-md-6 mt-5">
-                  <h2 id="abc">Find Us on Below Platform</h2>
-                  <p className="card-text abcc1 mt-3">
-                  Hello Trade is available on below platform. Download now
-                  </p>
-                  <div className="col-md-6">
-                    <a href="">
-                      <img src={app} />
-                    </a>
+              <div className={`${style['row']} ${style['align-items-center']}`}>
+                <div className={`${style['col-lg-6']}`}>
+                  <div className={`${style['about-img']} ${style['wow']} ${style['fadeInLeft']}`} data-wow-delay=".2s">
+                    <img src="https://smthemebazar.com/html/bigtech/assets/img/images/about_img01.png" alt="" />
+                    <img src="https://smthemebazar.com/html/bigtech/assets/img/images/about_img02.png" alt="" className={`${style['img-two']}`} />
                   </div>
-                  <div className="col-md-6 mt-1">
-                    <a href="">
-                      <img src={gg} />
-                    </a>
+                </div>
+                <div className={`${style['col-lg-6']}`}>
+                  <div className={`${style['about-content']} ${style['wow']} ${style['fadeInRight']}`} data-wow-delay=".2s">
+                    <div className={`${style['section-title']} ${style['mb-30']}`}>
+                      <span className={`${style['sub-title']}`}>Who we are</span>
+                      <h2 className={`${style['title']}`}>The World’s <span>1st ICO</span> Platform That Offers Rewards</h2>
+                    </div>
+                    <p>The World’s 1st ICO Platform That Offers Rewards and The platform helps investors to make easy to purchase and sell
+                      their tokens</p>
+                    <a href="#" className={`${style['btn']}`}>Purchase Tokens</a>
                   </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          {/* about-area-end */}
+          {/* partner-area */}
+          <div className={`${style['partner-area']} ${style['pb-130']}`}>
+            <div className={`${style['container']}`}>
+              <div className={`${style['row']} ${style['justify-content-center']}`}>
+                <div className={`${style['col-lg-8']}`}>
+                  <div className={`${style['section-title']} ${style['text-center']} ${style['mb-10']}`}>
+                    <span className={`${style['sub-title']}`}>Our top partner</span>
+                  </div>
+                </div>
+              </div>
+              <div className={`${style['row']}`}>
+                <div className={`${style['col-lg-12']}`}>
+                  <div className={`${style['partner-wrap']}`}>
+                    <ul>
+                      <li><img src="https://smthemebazar.com/html/bigtech/assets/img/partner/partner_img01.png" alt="" /></li>
+                      <li><img src="https://smthemebazar.com/html/bigtech/assets/img/partner/partner_img02.png" alt="" /></li>
+                      <li><img src="https://smthemebazar.com/html/bigtech/assets/img/partner/partner_img03.png" alt="" /></li>
+                      <li><img src="https://smthemebazar.com/html/bigtech/assets/img/partner/partner_img04.png" alt="" /></li>
+                      <li><img src="https://smthemebazar.com/html/bigtech/assets/img/partner/partner_img05.png" alt="" /></li>
+                      <li><img src="https://smthemebazar.com/html/bigtech/assets/img/partner/partner_img06.png" alt="" /></li>
+                      <li><img src="https://smthemebazar.com/html/bigtech/assets/img/partner/partner_img07.png" alt="" /></li>
+                      <li><img src="https://smthemebazar.com/html/bigtech/assets/img/partner/partner_img08.png" alt="" /></li>
+                      <li><img src="https://smthemebazar.com/html/bigtech/assets/img/partner/partner_img09.png" alt="" /></li>
+                      <li><img src="https://smthemebazar.com/html/bigtech/assets/img/partner/partner_img10.png" alt="" /></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* partner-area-end */}
+          {/* choose-area */}
+          <section className={`${style['choose-area']} ${style['pb-130']}`}>
+            <div className={`${style['container']}`}>
+              <div className={`${style['row']} ${style['justify-content-center']}`}>
+                <div className={`${style['col-xl-6']}`}>
+                  <div className={`${style['section-title']} ${style['text-center']} ${style['mb-50']}`}>
+                    <span className={`${style['sub-title']}`}>why Choose us</span>
+                    <h2 className={`${style['title']}`}>Why choose our bigtech <span>Token</span></h2>
+                  </div>
+                </div>
+              </div>
+              <div className={`${style['row']} ${style['choose-active']}`}>
+               
+                <div className={`${style['col-lg-3']}`}>
+                  <div className={`${style['choose-item']}`}>
+                    <div className={`${style['choose-icon']}`}>
+                      <img src="https://smthemebazar.com/html/bigtech/assets/img/icon/choose_icon01.svg" alt="" />
+                    </div>
+                    <div className={`${style['choose-content']}`}>
+                      <h2 className={`${style['title']}`}><a href="#">Mobile payment make easy</a></h2>
+                      <p>Add new, trending and rare artwork to your collection.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className={`${style['col-lg-3']}`}>
+                  <div className={`${style['choose-item']}`}>
+                    <div className={`${style['choose-icon']}`}>
+                      <img src="https://smthemebazar.com/html/bigtech/assets/img/icon/choose_icon01.svg" alt="" />
+                    </div>
+                    <div className={`${style['choose-content']}`}>
+                      <h2 className={`${style['title']}`}><a href="#">Mobile payment make easy</a></h2>
+                      <p>Add new, trending and rare artwork to your collection.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className={`${style['col-lg-3']}`}>
+                  <div className={`${style['choose-item']}`}>
+                    <div className={`${style['choose-icon']}`}>
+                      <img src="https://smthemebazar.com/html/bigtech/assets/img/icon/choose_icon01.svg" alt="" />
+                    </div>
+                    <div className={`${style['choose-content']}`}>
+                      <h2 className={`${style['title']}`}><a href="#">Mobile payment make easy</a></h2>
+                      <p>Add new, trending and rare artwork to your collection.</p>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div className={`${style['col-lg-3']}`}>
+                  <div className={`${style['choose-item']}`}>
+                    <div className={`${style['choose-icon']}`}>
+                      <img src="https://smthemebazar.com/html/bigtech/assets/img/icon/choose_icon01.svg" alt="" />
+                    </div>
+                    <div className={`${style['choose-content']}`}>
+                      <h2 className={`${style['title']}`}><a href="#">Mobile payment make easy</a></h2>
+                      <p>Add new, trending and rare artwork to your collection.</p>
+                    </div>
+                  </div>
+                </div>
+
+
 
                 
+              </div>
+              <div className={`${style['slide-progress']}`} role="progressbar" aria-valuemin={0} aria-valuemax={100}>
+                <span className={`${style['slider__label']} ${style['sr-only']}`} />
+              </div>
+            </div>
+          </section>
+          {/* choose-area-end */}
+          {/* chart-area */}
+          <section id="sales" className={`${style['chart-area']} ${style['chart-bg']} ${style['jarallax']}`}>
+            <div className={`${style['container']}`}>
+              <div className={`${style['chart-inner']}`}>
+                <div className={`${style['row']} ${style['align-items-center']} ${style['justify-content-center']}`}>
+                  <div className={`${style['col-lg-6']} ${style['col-md-10']} ${style['order-0']} ${style['order-lg-2']}`}>
+                    <div className={`${style['chart-wrap']} ${style['wow']} ${style['fadeInRight']}`} data-wow-delay=".2s">
+                      <img src="https://smthemebazar.com/html/bigtech/assets/img/images/chart.png" alt="" />
+                      <ul>
+                        <li>Contingency: 70%</li>
+                        <li>Business Development: 10%</li>
+                        <li>Investor: 30%</li>
+                        <li>Poland</li>
+                        <li>Legal &amp; Regulation:10%</li>
+                        <li>Czech Republic</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div className={`${style['col-lg-6']} ${style['col-md-10']}`}>
+                    <div className={`${style['chart-content']} ${style['wow']} ${style['fadeInLeft']}`} data-wow-delay=".2s">
+                      <ul className={`${style['nav']} ${style['nav-tabs']}`} id="myTab" role="tablist">
+                        <li className={`${style['nav-item']}`} role="presentation">
+                          <button className={`${style['nav-link']} ${style['active']}`} id="funding-tab" data-bs-toggle="tab" data-bs-target="#funding" type="button" role="tab" aria-controls="funding" aria-selected="true">Funding Allocation</button>
+                        </li>
+                        <li className={`${style['nav-item']}`} role="presentation">
+                          <button className={`${style['nav-link']}`} id="token-tab" data-bs-toggle="tab" data-bs-target="#token" type="button" role="tab" aria-controls="token" aria-selected="false">Token Allocation</button>
+                        </li>
+                      </ul>
+                      <div className={`${style['tab-content']}`} id="myTabContent">
+                        <div className={`${style['tab-pane']} ${style['fade']} ${style['show']} ${style['active']}`} id="funding" role="tabpanel" aria-labelledby="funding-tab">
+                          <div className={`${style['chart-content-inner']}`}>
+                            <h2 className={`${style['title']}`}>1 CNL = 0.0863 BTC</h2>
+                            <p>The World’s 1st ICO Platform That Offers Rewards and The platform helps investors to make easy to purchase and sell their tokens</p>
+                            <a href="#" className={`${style['btn']}`}>Buy Now</a>
+                          </div>
+                        </div>
+                        <div className={` ${style['tab-pane']} ${style['fade']} `} id="token" role="tabpanel" aria-labelledby="token-tab">
+                          <div className={` ${style['chart-content-inner']} `}>
+                            <h2 className= {` ${style['title']}  `}>2 CNL = 0.0967 BTC</h2>
+                            <p>The World’s 1st ICO Platform That Offers Rewards and The platform helps investors to make easy to purchase and sell their tokens</p>
+                            <a href="#" className= {`${style['btn']}`}>Buy Now</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          {/* chart-area-end */}
+          {/* area-bg */}
+          <div className="area-bg">
+            {/* roadMap-area */}
+            <section id="roadmap" className= {` ${style['roadmap-area']} ${style['pt-130']}  ${style['pb-130']}`} >
 
+              <div className= {`${style['container custom-container-two']}`}>
+
+                <div className=  {` ${style['row']} ${style['justify-content-center']}`}>
+                  <div className= {`${style['col-xl-5']} ${style['col-lg-8']}`}>
+                    <div className= {`${style['section-title']} ${style['text-center']} ${style['mb-60']}`}>
+                      <span className= {`${style['sub-title']}`}>OUr Roadmap</span>
+                      <h2 className= {`${style['title']}`}>Bigtech Strategy and <br /> Project <span>Plan</span></h2>
+                    </div>
+                  </div>
+                </div>
+                <div className={`${style['row']}`}>
+                  <div className= {`${style['col-lg-12']}`}>
+                    <div className= {`${style['bt-roadmap_x']}`}>
+                      <div className= {`${style['bt-roadmap-wrap']}`}>
+                        <div className=  {`${style['bt-roadmap-item']}`}>
+                          <span className= {`${style['roadmap-title']}`}>Mid of Q4 2021</span>
+                          <div className= {`${style['roadmap-content']}`}>
+                            <span className= {`${style['dot']}`} />
+                            <h4 className= {`${style['title']}`}>Concept</h4>
+                            <span>EVM support for parthians</span>
+                            <span>SubQuery Academy</span>
+                            <span>Proof of indexing</span>
+                          </div>
+                        </div>
+                        <div className= {`${style['bt-roadmap-item']}`}>
+                          <span className= {`${style['roadmap-title']}`}>Mid of Q4 2021</span>
+                          <div className= {`${style['roadmap-content']}`}>
+                            <span className= {`${style['dot']}`} />
+                            <h4 className= {`${style['title']}`} >Research</h4>
+                            <span>SubQuery Builders/Grants Program</span>
+                            <span>SQT Network contract internal MVP</span>
+                            <span>Coordinator and client SDK</span>
+                          </div>
+                        </div>
+                        <div className= {`${style['bt-roadmap-item']}`}>
+                          <span className=  {`${style['roadmap-title']}`}>Mid of Q4 2021</span>
+                          <div className= {`${style['roadmap-content']}`}>
+                            <span className= {`${style['dot']}`} />
+                            <h4 className= {`${style['title']}`} >App beta test</h4>
+                            <span>Public testnet launch</span>
+                            <span>SubQuery Network Explorer and dApp</span>
+                            <span>Point-in-time indexing</span>
+                          </div>
+                        </div>
+                        <div className= {`${style['bt-roadmap-item']}`}>
+                          <span className= {`${style['roadmap-title']}`}>Mid of Q4 2021</span>
+                          <div className=  {`${style['roadmap-content']}`}>
+                            <span className=  {`${style['dot']}`}/>
+                            <h4 className= {`${style['title']}`}>Token Test</h4>
+                            <span>SQT token generation event</span>
+                            <span>Public incentivize testnet launch</span>
+                            <span>Data traffic insights and reporting</span>
+                          </div>
+                        </div>
+                        <div className= {`${style['bt-roadmap-item']}`}>
+                          <span className= {`${style['roadmap-title']}`}>Mid of Q4 2021</span>
+                          <div className= {`${style['roadmap-content']}`}>
+                            <span className= {`${style['dot']}`}/>
+                            <h4 className= {`${style['title']}`}>Alpha test</h4>
+                            <span>Launch of the SubQuery Foundation</span>
+                            <span>Finalise research for other Layer-1 chains</span>
+                            <span>Liquidity mining program</span>
+                          </div>
+                        </div>
+                        <div className= {`${style['bt-roadmap-item']}`}>
+                          <span className= {`${style['roadmap-title']}`}>Mid of Q4 2021</span>
+                          <div className= {`${style['roadmap-content']}`}>
+                            <span className= {`${style['dot']}`}/>
+                            <h4 className= {`${style['title']}`}>Benefits</h4>
+                            <span>Mainnet launch</span>
+                            <span>Centralized exchange launch</span>
+                            <span>Public incentivize testnet</span>
+                          </div>
+                        </div>
+                        <div className= {`${style['bt-roadmap-item']}`}>
+                          <span className= {`${style['roadmap-title']}`}>Mid of Q4 2021</span>
+                          <div className= {`${style['roadmap-content']}`}>
+                            <span className= {`${style['dot']}`} />
+                            <h4 className= {`${style['title']}`}>Operational</h4>
+                            <span>SubQuery launches its <br /> own parthian</span>
+                            <span>SubQuery Foundation</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            {/* roadMap-area-end */}
+            {/* document-area */}
+            <section className= {`${style['document-area']} ${style['pt-60']}`}>
+              <div className= {`${style['container']}`}>
+                <div className= {` ${style['row']} ${style['justify-content-center']}`}>
+                  <div className= {`${style['col-lg-7']} ${style['order-2']} ${style['order-lg-0']}`}>
+                    <div className= {`${style['document-img']} ${style['text-center']} ${style['wow']} ${style['fadeInUp']}`} data-wow-delay=".2s">
+                      <img src="https://smthemebazar.com/html/bigtech/assets/img/images/document_img.png" alt="" />
+                    </div>
+                  </div>
+                  <div className= {`${style['col-lg-5']} ${style['col-md-7']}`}>
+                    <div className= {`${style['document-content']} ${style['mt-50']}  ${style['wow']} ${style['fadeInRight']}`} data-wow-delay=".2s">
+                      <div className= {`${style['section-title']} ${style['mb-35']}`}>
+                        <span className= {`${style['sub-title']}`}>Whitepaper</span>
+                        <h2 className= {`${style['title']}`}>Read Bigtech <span>Documents</span></h2>
+                      </div>
+                      <ul className= {`${style['document-list']}`}>
+                        <li>White Paper</li>
+                        <li>Privaci &amp; Policy</li>
+                        <li>Terms Of Coin Sale</li>
+                        <li>One Pager</li>
+                      </ul>
+                      <a href="#" className= {`${style['btn']}`}>Download Doc</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            {/* document-area-end */}
+          </div>
+          {/* area-bg-end */}
+          {/* team-area */}
+          <section className= {`${style['team-area']} ${style['pt-130']}`}>
+            <div className= {`${style['container']}`}>
+              <div className=  {` ${style['row']} ${style['justify-content-center']}`}>
+                <div className=  {`${style['col-xl-6']}`}>
+                  <div className= {`${style['section-title']} ${style['text-center']} ${style['mb-70']}`}>
+                    <span className= {`${style['sub-title']}`}>OUr team</span>
+                    <h2 className= {`${style['title']}`}>The Leadership <br /> <span>Team</span></h2>
+                  </div>
+                </div>
+              </div>
+              <div className=  {` ${style['row']} ${style['justify-content-center']}`}>
+                <div className= {`${style['col-xl-3']} ${style['col-md-4']} ${style['col-sm-6']}`}>
+                  <div className= {`${style['team-item']}`}>
+                    <div className= {`${style['team-thumb']}`}>
+                      <img src="https://smthemebazar.com/html/bigtech/assets/img/team/team_img01.png" alt="" />
+                    </div>
+                    <div className= {`${style['team-content']}`}>
+                      <h2 className= {`${style['title']}`}>Cameron Williamson</h2>
+                      <span>Founder &amp; CO</span>
+                      <ul className= {`${style['team-social']}`}>
+                        <li><a href="#"><i className= {`${style['fab fa-youtube']}`}/></a></li>
+                        <li><a href="#"><i className= {`${style['fab fa-twitter']}`}/></a></li>
+                        <li><a href="#"><i className= {`${style['fab fa-facebook-f']}`} /></a></li>
+                        <li><a href="#"><i className= {`${style['fab fa-instagram']}`}/></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div className= {`${style['col-xl-3']} ${style['col-md-4']} ${style['col-sm-6']}`}>
+                  <div className={`${style['team-item']}`}>
+                    <div className={`${style['team-thumb']}`}>
+                      <img src="https://smthemebazar.com/html/bigtech/assets/img/team/team_img02.png" alt="" />
+                    </div>
+                    <div className={`${style['team-content']}`}>
+                      <h2 className={`${style['title']}`}>Eleanor Pena</h2>
+                      <span>Head of Design</span>
+                      <ul className={`${style['team-social']}`}>
+                      <li><a href="#"><i className= {`${style['fab fa-youtube']}`}/></a></li>
+                        <li><a href="#"><i className= {`${style['fab fa-twitter']}`}/></a></li>
+                        <li><a href="#"><i className= {`${style['fab fa-facebook-f']}`} /></a></li>
+                        <li><a href="#"><i className= {`${style['fab fa-instagram']}`}/></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div className={`${style['col-xl-3']} ${style['col-md-4']} ${style['col-sm-6']}`}>
+                  <div className={`${style['team-item']}`}>
+                    <div className={`${style['team-thumb']}`}>
+                      <img src="https://smthemebazar.com/html/bigtech/assets/img/team/team_img03.png" alt="" />
+                    </div>
+                    <div className={`${style['team-content']}`}>
+                      <h2 className={`${style['title']}`}>Bessie Cooper</h2>
+                      <span>Vp People</span>
+                      <ul className={`${style['team-social']}`}>
+                      <li><a href="#"><i className= {`${style['fab fa-youtube']}`}/></a></li>
+                        <li><a href="#"><i className= {`${style['fab fa-twitter']}`}/></a></li>
+                        <li><a href="#"><i className= {`${style['fab fa-facebook-f']}`} /></a></li>
+                        <li><a href="#"><i className= {`${style['fab fa-instagram']}`}/></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div className={`${style['col-xl-3']} ${style['col-md-4']} ${style['col-sm-6']}`}>
+                  <div className={`${style['team-item']}`}>
+                    <div className={`${style['team-thumb']}`}>
+                      <img src="https://smthemebazar.com/html/bigtech/assets/img/team/team_img04.png" alt="" />
+                    </div>
+                    <div className={`${style['team-content']}`}>
+                      <h2 className={`${style['title']}`}>Darlene Robertson</h2>
+                      <span>Product Manager</span>
+                      <ul className={`${style['team-social']}`}>
+                      <li><a href="#"><i className= {`${style['fab fa-youtube']}`}/></a></li>
+                        <li><a href="#"><i className= {`${style['fab fa-twitter']}`}/></a></li>
+                        <li><a href="#"><i className= {`${style['fab fa-facebook-f']}`} /></a></li>
+                        <li><a href="#"><i className= {`${style['fab fa-instagram']}`}/></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div className={`${style['col-xl-3']} ${style['col-md-4']} ${style['col-sm-6']}`}>
+                  <div className={`${style['team-item']}`}>
+                    <div className={`${style['team-thumb']}`}>
+                      <img src="https://smthemebazar.com/html/bigtech/assets/img/team/team_img05.png" alt="" />
+                    </div>
+                    <div className={`${style['team-content']}`}>
+                      <h2 className={`${style['title']}`}>Jacob Jones</h2>
+                      <span>Marketer</span>
+                      <ul className={`${style['team-social']}`}>
+                      <li><a href="#"><i className= {`${style['fab fa-youtube']}`}/></a></li>
+                        <li><a href="#"><i className= {`${style['fab fa-twitter']}`}/></a></li>
+                        <li><a href="#"><i className= {`${style['fab fa-facebook-f']}`} /></a></li>
+                        <li><a href="#"><i className= {`${style['fab fa-instagram']}`}/></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div className={`${style['col-xl-3']} ${style['col-md-4']} ${style['col-sm-6']}`}>
+                  <div className={`${style['team-item']}`}>
+                    <div className={`${style['team-thumb']}`}>
+                      <img src="https://smthemebazar.com/html/bigtech/assets/img/team/team_img06.png" alt="" />
+                    </div>
+                    <div className={`${style['team-content']}`}>
+                      <h2 className={`${style['title']}`}>Courtney Henry</h2>
+                      <span>Founder</span>
+                      <ul className={`${style['team-social']}`}>
+                      <li><a href="#"><i className= {`${style['fab fa-youtube']}`}/></a></li>
+                        <li><a href="#"><i className= {`${style['fab fa-twitter']}`}/></a></li>
+                        <li><a href="#"><i className= {`${style['fab fa-facebook-f']}`} /></a></li>
+                        <li><a href="#"><i className= {`${style['fab fa-instagram']}`}/></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div className={`${style['col-xl-3']} ${style['col-md-4']} ${style['col-sm-6']}`}>
+                  <div className={`${style['team-item']}`}>
+                    <div className={`${style['team-thumb']}`}>
+                      <img src="https://smthemebazar.com/html/bigtech/assets/img/team/team_img07.png" alt="" />
+                    </div>
+                    <div className={`${style['team-content']}`}>
+                      <h2 className={`${style['title']}`}>Ronald Richards</h2>
+                      <span>Account Manager</span>
+                      <ul className={`${style['team-social']}`}>
+                      <li><a href="#"><i className= {`${style['fab fa-youtube']}`}/></a></li>
+                        <li><a href="#"><i className= {`${style['fab fa-twitter']}`}/></a></li>
+                        <li><a href="#"><i className= {`${style['fab fa-facebook-f']}`} /></a></li>
+                        <li><a href="#"><i className= {`${style['fab fa-instagram']}`}/></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div className={`${style['col-xl-3']} ${style['col-md-4']} ${style['col-sm-6']}`}>
+                  <div className={`${style['team-item']}`}>
+                    <div className={`${style['team-thumb']}`}>
+                      <img src="https://smthemebazar.com/html/bigtech/assets/img/team/team_img08.png" alt="" />
+                    </div>
+                    <div className={`${style['team-content']}`}>
+                      <h2 className={`${style['title']}`}>Theresa Webb</h2>
+                      <span>Founder &amp; CO</span>
+                      <ul className={`${style['team-social']}`}>
+                      <li><a href="#"><i className= {`${style['fab fa-youtube']}`}/></a></li>
+                        <li><a href="#"><i className= {`${style['fab fa-twitter']}`}/></a></li>
+                        <li><a href="#"><i className= {`${style['fab fa-facebook-f']}`} /></a></li>
+                        <li><a href="#"><i className= {`${style['fab fa-instagram']}`}/></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          {/* team-area-end */}
+          {/* contact-area */}
+          <section id="contact" className= {`${style['contact-area']} ${style['pt-70']} ${style['pb-110']}`}>
+            <div className= {`${style['container']}`}>
+              <div className= {` ${style['row']} ${style['justify-content-center']}`}>
+                <div className= {`${style['col-lg-8']}`}>
+                  <div className= {`${style['section-title']} ${style['text-center']} ${style['mb-70']}`}>
+                    <span className= {`${style['sub-title']}`}>Contact</span>
+                    <h2 className={`${style['title']}`}><span>Contact</span> ICO Crypto</h2>
+                  </div>
+                </div>
+              </div>
+              <div className= {`${style['contact-info-wrap']}`}>
+                <div className= {` ${style['row']} ${style['justify-content-center']}`}>
+                  <div className= {`${style['col-lg-4']} ${style['col-sm-6']}`}>
+                    <div className= {`${style['contact-info-item']}`}>
+                      <div className= {`${style['icon']}`}>
+                        <span className= {`${style['icon-background']}`}/>
+                        <i className= {`${style['fas fa-envelope']}`} />
+                      </div>
+                      <div className= {`${style['content']}`}>
+                        <p>company@gmail.com <br /> infoweb@gmail.com</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className={`${style['col-lg-4']} ${style['col-sm-6']}`}>
+                    <div className={`${style['contact-info-item']}`}>
+                      <div className={`${style['icon']}`}>
+                        <span className={`${style['icon-background']}`}/>
+                        <i className={`${style['fas fa-phone']}`} />
+                      </div>
+                      <div className={`${style['content']}`}>
+                        <p>+84 0977425031<br /> +998 765 775 34</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className={`${style['col-lg-4']} ${style['col-sm-6']}`}>
+                    <div className={`${style['contact-info-item']}`}>
+                      <div className={`${style['icon']}`}>
+                        <span className={`${style['icon-background']}`}/>
+                        <i className= {`${style['fas fa-map-marker-alt']}`} />
+                      </div>
+                      <div className={`${style['content']}`}>
+                        <p>State/province/area: <br />Georgia 198</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className= {`${style['contact-form-wrap']}`}>
+                <form action="#">
+                  <div className= {`${style['row']}`}>
+                    <div className= {`${style['col-md-6']}`}>
+                      <div className= {`${style['form-grp']}`}>
+                        <input type="text" placeholder="Enter your Name" required />
+                      </div>
+                    </div>
+                    <div className={`${style['col-md-6']}`}>
+                      <div className={`${style['form-grp']}`}>
+                        <input type="email" placeholder="Enter you email" required />
+                      </div>
+                    </div>
+                  </div>
+                  <div className={`${style['form-grp']}`}>
+                    <textarea name="massage" placeholder="Enter your massage" defaultValue={""} />
+                  </div>
+                  <div className= {`${style['submit-btn']} ${style['text-center']}`}>
+                    <button type="submit" className= {`${style['btn']}`}>Send Massage</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </section>
+          {/* contact-area-end */}
+        </main>
+        {/* main-area-end */}
+        {/* footer-area */}
+        <footer>
+          <div className= {`${style['footer-area']}`}>
+            <div className= {`${style['container']}`}>
+              <div className= {`${style['footer-scroll-wrap']}`}>
+                <button className= {`${style['scroll-to-target']}`} data-target="html"><i className="fas fa-arrow-up" /></button>
+              </div>
+              <div className= {`${style['footer-top']}`}>
+                <div className= {`${style['row']}`}>
+                  <div className= {`${style['col-xl-3']} ${style['col-lg-4']} ${style['col-md-6']}`}>
+                    <div className= {`${style['footer-widget']} ${style['wow']} ${style['fadeInUp']}`} data-wow-delay=".2s">
+                      <a href="index.html" className= {`${style['f-logo']}`}><img src="https://smthemebazar.com/html/bigtech/assets/img/logo/logo.png" alt="" /></a>
+                      <div className= {`${style['footer-content']}`}>
+                        <p>A new way to make the payments easy, reliable and 100% secure. claritatem itamconse quat. Exerci tationulla</p>
+                        <ul className= {`${style['footer-social']}`}>
+                          <li><a href="#"><i className= {`${style['fab fa-youtube']}`}/></a></li>
+                          <li><a href="#"><i className= {`${style['fab fa-twitter']}`}/></a></li>
+                          <li><a href="#"><i className= {`${style['fab fa-facebook-f']}`}/></a></li>
+                          <li><a href="#"><i className= {`${style['fab fa-skype']}`} /></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div className= {`${style['col-xl-3']} ${style['col-lg-5']} ${style['col-sm-6']}`}>
+                    <div className= {`${style['footer-widget']} ${style['wow']} ${style['fadeInUp']}`} data-wow-delay=".4s">
+                      <h4 className= {`${style['fw-title']}`}>Useful Links</h4>
+                      <div className= {`${style['footer-link']}`}>
+                        <ul>
+                          <li><a href="#">Contact us</a></li>
+                          <li><a href="#">How it Works</a></li>
+                          <li><a href="#">Create</a></li>
+                          <li><a href="#">Explore</a></li>
+                          <li><a href="#">Terms &amp; Services</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div className=  {`${style['col-xl-2']} ${style['col-lg-3']} ${style['col-sm-6']}`}>
+                    <div className= {`${style['footer-widget']} ${style['wow']}  ${style['fadeInUp']}`} data-wow-delay=".6s">
+                      <h4 className= {`${style['fw-title']}`}>Community</h4>
+                      <div className= {`${style['footer-link']}`}>
+                        <ul>
+                          <li><a href="#">Help Center</a></li>
+                          <li><a href="#">Partners</a></li>
+                          <li><a href="#">Suggestions</a></li>
+                          <li><a href="#">Blog</a></li>
+                          <li><a href="#">Newsletters</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div className= {`${style['col-xl-4']} ${style['col-lg-4']} ${style['col-md-6']}`}>
+                    <div className={`${style['footer-widget']}  ${style['wow']} ${style['fadeInUp']}`} data-wow-delay=".8s">
+                      <h4 className={`${style['fw-title']}`}>Subscribe Newsletter</h4>
+                      <div className= {`${style['footer-newsletter']}`}>
+                        <p>Exerci tation ullamcorper suscipit lobortis nisl aliquip ex ea commodo</p>
+                        <form action="#">
+                          <input type="email" placeholder="Info@gmail.com" required />
+                          <button type="submit"><i className= {`${style['fas fa-paper-plane']}`} /></button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className= {`${style['footer-bottom']}`}>
+                <div className= {`${style['row align-items-center']}`}>
+                  <div className= {`${style['col-lg-6']}`}>
+                    <div className= {`${style['copyright-text']}`}>
+                      <p>Copyright © 2023. All Rights Reserved Bigtech</p>
+                    </div>
+                  </div>
+                  <div className={`${style['col-lg-6']} ${style['d-none']} ${style['d-sm-block']}`}>
+                    <div className= {`${style['footer-menu']}`}>
+                      <ul>
+                        <li><a href="#">Terms and conditions</a></li>
+                        <li><a href="#">Privacy policy</a></li>
+                        <li><a href="#">Login / Signup</a></li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        </footer>
+        {/* footer-area-end */}
+        {/* JS here */}
+        {/* Mirrored from smthemebazar.com/html/bigtech/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 23 Feb 2023 11:09:29 GMT */}
       </div>
-      {/* ??////////////////////////////////////////////////////////////////////////// */}
-      <footer className="page-footer font-small blue mt-5">
-        <div className="container logo-container">
-          
-        </div>
-
-        
-        <div className="footer-copyright text-center py-3 c">
-          © 2022 Copyright:
-          <a className="c" href="#">
-            {" "}
-            http://Hello Trade.io/          </a>
-        </div>
-      </footer>
-    </div>
 
     
 
